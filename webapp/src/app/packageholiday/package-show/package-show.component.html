@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="details">
+    <div class="insideDetails">
+      <h1>Holiday packages</h1>
+      <button class="add" (click)="onBack()">Back</button>
+      <br>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <th> StartDate </th>
+      <th> EndDate </th>
+      <th> Price </th>
+      <th> Options </th>
+    </tr>
+    <tr *ngFor="let customer of packages">
+      <td>{{customer.startdate}}</td>
+      <td>{{customer.enddate}}</td>
+      <td>{{customer.price}}</td>
+      <td>
+        <button id="updateButton" >Update</button>
+        <br>
+        <button id="deleteButton">Delete</button>
+        <br>
+      </td>
+    </tr>
+  </table>
+</div>

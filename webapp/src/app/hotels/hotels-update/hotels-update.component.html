@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Update Hotel</h1>
+  <p><b>Please fill this form and submit to update the hotel from the database.</b></p>
+
+  <form #hotelForm = "ngForm" class="formWrapper" (ngSubmit)="updateHotel(hotelForm.value)">
+    <input type="text" name="name" placeholder="Name:" [ngModel]="name"> <br>
+    <input type="text" name="location" placeholder="Location:" [ngModel] = "location"> <br>
+    <input type="number" name="stars" placeholder="Stars:" [ngModel] = "stars"> <br>
+    <input type="number" name="capacity" placeholder="Capacity:" [ngModel] = "capacity"> <br>
+    <div class="button_container">
+      <button type="submit">
+        Update Hotel
+      </button>
+      <button (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

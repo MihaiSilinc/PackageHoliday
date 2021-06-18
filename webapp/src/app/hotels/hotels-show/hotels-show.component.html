@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="details">
+    <div class="insideDetails">
+      <h1>Hotels</h1>
+      <button class="add" (click)="onBack()">Back</button>
+      <button class="back" (click)="navigateToAdd()">
+        Add Hotel</button>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <th> NAME </th>
+      <th> LOCATION </th>
+      <th> STARS </th>
+      <th> CAPACITY </th>
+      <th> OPTIONS </th>
+    </tr>
+    <tr *ngFor="let hotel of hotels">
+      <td>{{hotel.name}}</td>
+      <td>{{hotel.location}}</td>
+      <td>{{hotel.stars}}</td>
+      <td>{{hotel.capacity}}</td>
+      <td>
+        <button id="updateButton" (click)="navigateToUpdate(hotel.id)">Update</button>
+        <br>
+        <button id="deleteButton" (click)="navigateToDelete(hotel.id)">Delete</button>
+        <br>
+      </td>
+    </tr>
+  </table>
+</div>

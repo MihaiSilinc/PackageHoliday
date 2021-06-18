@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Create Hotel</h1>
+  <p><b>Please fill this form and submit to add the hotel to the database.</b></p>
+
+  <form [formGroup]="addHotelForm" class="formWrapper" (submit)="addHotel()">
+    <input type="text" name="name" placeholder="Name:" formControlName="name"> <br>
+    <input type="text" name="location" placeholder="Location:" formControlName="location"> <br>
+    <input type="number" name="stars" placeholder="Stars:" formControlName="stars"> <br>
+    <input type="number" name="capacity" placeholder="Capacity:" formControlName="capacity"> <br>
+    <div class="button_container">
+      <button type="submit">
+        Add Hotel
+      </button>
+      <button (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

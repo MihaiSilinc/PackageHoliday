@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="details">
+    <div class="insideDetails">
+      <h1>Customers</h1>
+      <button class="add" (click)="onBack()">Back</button>
+    <button class="back" (click)="navigateToAdd()">
+      Add Customer
+    </button>
+      <br>
+      <input #name type="text" (input)="refresh(name.value)" placeholder="Name:"/>
+      </div>
+  </div>
+  <table>
+    <tr>
+      <th> NAME </th>
+      <th> AGE </th>
+      <th> OPTION </th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.name}}</td>
+      <td>{{customer.age}}</td>
+      <td>
+        <button id="updateButton" (click)="navigateToUpdate(customer.id)">Update</button>
+        <br>
+        <button id="deleteButton" (click)="navigateToDelete(customer.id)">Delete</button>
+        <br>
+      </td>
+    </tr>
+  </table>
+</div>
+
